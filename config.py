@@ -1,5 +1,12 @@
+from typing import Literal
+
 from pydantic import BaseModel, HttpUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Logger(BaseModel):
+
+    log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
 
 
 class HttpClient(BaseModel):
@@ -16,6 +23,7 @@ class Settings(BaseSettings):
     )
 
     http_client: HttpClient
+    logger: Logger
 
 
 settings = Settings()

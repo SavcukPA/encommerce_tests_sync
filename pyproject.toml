@@ -1,0 +1,31 @@
+[project]
+name = "encommerce-tests-sync"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Pavel",email = "savchukpa@icloud.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest (>=8.4.2,<9.0.0)",
+    "allure-pytest (>=2.15.0,<3.0.0)",
+    "selenium (>=4.37.0,<5.0.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "pydantic (>=2.12.3,<3.0.0)",
+    "pydantic-settings (>=2.11.0,<3.0.0)",
+    "faker (>=37.12.0,<38.0.0)",
+    "validators (>=0.35.0,<0.36.0)",
+    "email-validator (>=2.3.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "black (>=25.9.0,<26.0.0)"
+]
